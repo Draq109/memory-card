@@ -1,4 +1,3 @@
-
 export default function Score({score,highScore}) {
     return(
     <div className="Score">

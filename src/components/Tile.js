@@ -1,17 +1,27 @@
+import { useState, useEffect } from "react";
+export default function Tile(props) {
+    const [clicked, setClicked] = useState(false);
 
-export default function Tile({ image, name, id}) {
+    function tileClicked() {
+        if (clicked === true)
+            props.resetGame();
+        else {
+            setClicked(true);
+            props.incrementScore();
+            props.randomizePositions();
+        }
+    }
+
+    useEffect(() => {
+        if (!props.reset) {
+            setClicked(false);
+        }
+    }, [props.reset])
+
     return (
         <div className="Tile">
-            <img src={image} alt={name}/>
-            <span>{name}</span>
+            <img src={props.pokemon.image} alt={props.pokemon.name} onClick={tileClicked} />
+            <span>{props.pokemon.name}</span>
         </div>
     );
 }
-
-/*
-{pokemons.map(pokemon => {
-        return (
-          <Tile image={pokemon.image} name={pokemon.name} id={pokemon.id}></Tile>
-        )
-      })}
-*/
