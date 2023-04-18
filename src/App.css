@@ -1,38 +1,69 @@
-.App {
+@font-face {
+  font-family: "Pokemon-Solid";
+  src: local("Pokemon-Solid"),
+  url(./Fonts/Pokemon-Solid.ttf) format("truetype");
+}
+@font-face {
+  font-family: "JustMyType";
+  src: local("JustMyType.ttf"),
+  url(./Fonts/JustMyType.ttf) format("truetype");
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: rgb(12, 12, 126);
+  background-image: url(./background.jpg);
+  background-repeat: no-repeat;
+  width: auto;
+  height: auto;
+}
+.Title {
+  font-family: 'Pokemon-Solid', 'Courier New', Courier, monospace;
+  color: yellow;
+  letter-spacing: .2rem;
   text-align: center;
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.Title h1 {
+  margin: 0;
+  text-shadow: .3rem .3rem black;
+  font-size: 2.8rem;
+}
+.Title p {
+  margin: 0;
+  font-size: 1.2rem;
+  text-shadow: .1rem .1rem black;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.Score {
+  font-family: 'JustMyType','Courier New', Courier, monospace;
+  text-align: center;
+  font-size: 1.8rem;
+  padding-top: 0;
+  padding-bottom: 0;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.Grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.Tile {
+  background-image: url(./pokedex.png);
+  background-repeat: no-repeat;
+  background-size: 85%;
   display: flex;
   flex-direction: column;
+  flex: 0 0 15%;
+  height: 25rem;
+  align-self: center;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  align-content: center;
+}
+.Tile img{
+  width: auto;
+  height: 46%;
+  padding-top: 5rem;
+  padding-right: 1rem;
 }
 
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}

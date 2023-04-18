@@ -1,6 +1,6 @@
 import { useState } from "react";
-import Tile from "./Tile";
 import { pokemons } from "../pokemons";
+import Tile from "./Tile";
 export default function Grid(props) {
     const [positions, setPositions] = useState(pokemons.map((value, index) => index))
     

@@ -21,7 +21,6 @@ export default function Tile(props) {
     return (
         <div className="Tile">
             <img src={props.pokemon.image} alt={props.pokemon.name} onClick={tileClicked} />
-            <span>{props.pokemon.name}</span>
         </div>
     );
 }

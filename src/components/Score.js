@@ -3,6 +3,7 @@ export default function Score({score,highScore}) {
     <div className="Score">
         <p>
             Score: {score}
+            <br/>
             High Score: {highScore}
         </p>
     </div>

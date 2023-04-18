@@ -30,10 +30,10 @@ function App() {
       <div className="Title" >
         <h1>Click'em All</h1>
         <p>Click on each image once to get a point, if an image is clicked on twice you lose all your points.
-          Try to click on all images once for a maximum score.</p>
+          <br/>Try to click on all the images once for the maximum score.</p>
       </div>
-      <span><Score score={score} highScore={highScore}></Score></span>
-      <Grid
+      <span><Score key="Score" score={score} highScore={highScore}></Score></span>
+      <Grid key="Grid"
         incrementScore={incrementScore}
         resetGame={resetGame}
         reset={reset} ></Grid>
